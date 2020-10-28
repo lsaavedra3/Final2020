@@ -47,6 +47,7 @@ In this Data Analysis I am going to be using cat~cat type of summaries.
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 # Descriptive Results 
 
+# Graphical Results 
 ```{r}
 DataF= filter(FinalData, sex== "gal")
 barchartGC(~infected + treatment,data=DataF)
@@ -54,8 +55,24 @@ barchartGC(~infected + treatment,data=DataF, type="percent")
 
 ```
 
-Among the females who cpntracted COVID-19, it looks like twice as many took the placebo, therefore it appears that the vaccine DOES have an effect that prevents females from getting COVID-19.  
+Among the females who contracted COVID-19, it looks like twice as many took the placebo, therefore it appears that the vaccine DOES have an effect that prevents females from getting COVID-19.    
 
+#Numerical summary  
+```{r}
+
+table1 <- xtabs(~infected + treatment, data=DataF)
+rowPerc(table1)
+colPerc(table1)
+```
+
+#Inferential  
+
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
 # Discussion and Conclusion
 
