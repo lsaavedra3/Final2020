@@ -21,7 +21,7 @@ A new  preventative vaccine (covid91) is under test in clinical trials. Given th
 
 In this clinical trial, is the vaccine effective preventing the targeted population from getting COVID 19?  
 
-# Female Report
+
 
 $H_0$: Among the female population, the drug has NO effect in preventing COVID-19.  
 
@@ -46,18 +46,21 @@ $H_A$: Among the Drug User population the vaccine has an effect in preventing CO
 
 # Methods
 
-<!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
-In this Data Analysis I am going to be using cat~cat type of summaries.
+<!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->  
+
+
+In this Data Analysis I am going to be using cat~cat type of summaries.  
 # Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 # Descriptive Results 
 
 # Graphical Results 
+# Female Report
 ```{r}
 DataF= filter(FinalData, sex== "gal")
 barchartGC(~infected + treatment,data=DataF)
-barchartGC(~infected + treatment,data=DataF, type="percent")
+barchartGC(~infected + treatment,data=DataF, type="percent", main="Gal")
 
 ```
 
@@ -80,7 +83,33 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
+## Male Report  
+```{r}
+DataG= filter(FinalData, sex== "guy")
+barchartGC(~infected + treatment,data=DataG)
+barchartGC(~infected + treatment,data=DataG, type="percent", main= "guys")
+
+```
+ 
+# Numerical Summary  
+```{r}
+
+table1 <- xtabs(~infected + treatment, data=DataG)
+rowPerc(table1)
+colPerc(table1)
+```
+
+#Inferential  
+
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
 # Discussion and Conclusion
+
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->  
 According to the charts and the numerical results, it seems that the females that took the drug are less likely to contract COVID-19.
