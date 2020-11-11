@@ -135,7 +135,16 @@ fisher.test(table1)
 
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->  
-According to the charts and the numerical results, it seems that the females that took the drug are less likely to contract COVID-19.  
+According to the charts and the numerical results, it seems that the females that took the drug are less likely to contract COVID-19. From the women who took the drug only 33.11 got infected with COVID-19 and 50.31 where ok with the drug.According to the inferential test that was 95.56% that were not infected making the vaccine very effective among the female population. The p. Value<2.2e-16, we Fail to reject the null Hypothesis, the vaccine did have an effect in the Female population in whether they contracted COVID-19.
+
+According to the male data and numerical results, male who took the vaccine were conctracting COVID-19, 58.16 of the males who took the treatment contracted covid and only 48.54 were ok. From this data it seems that men are most likely to contract COVID-19 with the given vaccine.The P.Value was of 6e-04<0.05, We reject the null hypothesis, the vaccine had no effect in whether males contracted the virus.  
+
+According to the LGBTQ data 70.69 contracted COVID-19 with the treatment and only  49.17 did not contract the virus with the vaccine. From this data it seems that the vaccine had no positive effect in the LGBTQ community and people were still contracting the virus. The P. Value was 1.05e-05, which is less than 0.05, we reject the null hypothesis The vaccine had no effect whether LGBTQ  contracted COVID-19.
+
+According to the data from the Drug Users 33.33 contracted COVID-19 with the treatment and 47.83 did not contract the virus with the treatment. On this Drug User data we came a little bit close to having the same results from people infected and people who got covid-19, but if we take a look at the P. Value of the chi square, we can now determine the effect of the vaccine. Since the p value is 0.002273<0.05 then we Reject the Null hypothesis and we can say that the vaccine did have an effect in whether Drug Users contracted COVID-19.
+
+
+  
 
 
 
